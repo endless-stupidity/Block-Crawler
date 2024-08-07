@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://di0p72fbofhll"]
+
+[ext_resource type="Texture2D" uid="uid://c7rukp28ujvjx" path="res://Assets/Graphics/Game Screen/Character.png" id="1_behia"]
+[ext_resource type="PackedScene" uid="uid://dc7rtq32bkt5" path="res://Scenes/Game Screen/Mechanics/Movement.tscn" id="2_kv2q4"]
+
+[node name="Emojihead (Player)" type="Node2D"]
+metadata/Name = "Emojihead"
+metadata/Description = ""
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_behia")
+
+[node name="Movement" parent="." instance=ExtResource("2_kv2q4")]
+metadata/Controllable = true
