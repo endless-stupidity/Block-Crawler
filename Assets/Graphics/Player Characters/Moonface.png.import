@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7rukp28ujvjx"
-path="res://.godot/imported/Character.png-32065d0202aabfa80d74a6204eda7811.ctex"
+path="res://.godot/imported/Moonface.png-5335c11c8026035d9624bba41f2d362c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Game Screen/Character.png"
-dest_files=["res://.godot/imported/Character.png-32065d0202aabfa80d74a6204eda7811.ctex"]
+source_file="res://Assets/Graphics/Player Characters/Moonface.png"
+dest_files=["res://.godot/imported/Moonface.png-5335c11c8026035d9624bba41f2d362c.ctex"]
 
 [params]
 

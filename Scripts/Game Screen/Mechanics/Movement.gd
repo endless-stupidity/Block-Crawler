@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var the_grid: TileMap
 @onready var moveable: Node2D
+enum MovingDirection {UP, DOWN, LEFT, RIGHT}
 var swipe_start_position
 var swipe_end_position
 var has_dragged = false
@@ -39,6 +40,29 @@ func _input(event: InputEvent) -> void:
 						else:
 							swipe_direction = "up"
 					print_debug(swipe_direction)
+					move(string_to_movingdirection(swipe_direction))
 					has_dragged = false
 	else:
 		pass
+
+func move(direction: MovingDirection) -> void:
+	var jump = get_meta("Jump")
+	match direction:
+		MovingDirection.UP:
+			moveable.position.y = moveable.position.y - 32
+		MovingDirection.DOWN:
+			moveable.position.y = moveable.position.y + 32
+		MovingDirection.LEFT:
+			moveable.position.x = moveable.position.x - 32
+		MovingDirection.RIGHT:
+			moveable.position.x = moveable.position.x + 32
+
+func string_to_movingdirection(string_direction: String) -> MovingDirection:
+	match string_direction:
+		"up": return MovingDirection.UP
+		"down": return MovingDirection.DOWN
+		"left": return MovingDirection.LEFT
+		"right": return MovingDirection.RIGHT
+		_: 
+			printerr("Invalid direction string: ", string_direction)
+			return MovingDirection.UP
