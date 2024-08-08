@@ -3,7 +3,7 @@ extends Node2D
 var max_health: int
 var health: int
 
-func _init() -> void:
+func _ready() -> void:
 	max_health = get_meta("StartingMaxHealth")
 	health = max_health
 
@@ -22,3 +22,6 @@ func set_health(target_health: int) -> void:
 	health = target_health
 	if health > target_health:
 		health = max_health
+
+func take_damage(taken_damage: int) -> void:
+	health -= taken_damage
