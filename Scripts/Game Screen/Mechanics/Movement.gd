@@ -49,13 +49,13 @@ func move(direction: MovingDirection) -> void:
 	var jump = get_meta("Jump")
 	match direction:
 		MovingDirection.UP:
-			moveable.position.y = moveable.position.y - 32
+			moveable.position.y = moveable.position.y - 32 * jump
 		MovingDirection.DOWN:
-			moveable.position.y = moveable.position.y + 32
+			moveable.position.y = moveable.position.y + 32 * jump
 		MovingDirection.LEFT:
-			moveable.position.x = moveable.position.x - 32
+			moveable.position.x = moveable.position.x - 32 * jump
 		MovingDirection.RIGHT:
-			moveable.position.x = moveable.position.x + 32
+			moveable.position.x = moveable.position.x + 32 * jump
 
 func string_to_movingdirection(string_direction: String) -> MovingDirection:
 	match string_direction:
