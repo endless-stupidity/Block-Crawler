@@ -1,6 +1,7 @@
 extends Node2D
 
 # Variables to store the properties of the entity
+@export_enum("Normal", "Slash", "Fire", "Ice", "Air") var damage_type: String = "Normal" # Damage type of the entity
 var damage: int             # Base damage dealt by the entity
 var crit_chance: float      # Probability of a critical hit (percentage)
 var crit_damage: float      # Multiplier applied to damage on a critical hit
@@ -45,8 +46,8 @@ func attack(target_object: Node2D) -> void:
 	# Calculate if a critical hit occurs (if crit_chance is higher than a random value between 0 and 100)
 	if crit_chance > randf_range(0.0, 100.0):
 		# If critical hit, apply crit_damage multiplier to the base damage
-		final_damage = (crit_damage * damage) + damage
+		final_damage = ((crit_damage * damage) / 100) + damage
 	# Get the target object's Health node
 	var target_object_health = target_object.get_node("Health")
 	# Apply the calculated damage to the target object's health
-	target_object_health.take_damage(final_damage)
+	target_object_health.take_damage(final_damage, damage_type)

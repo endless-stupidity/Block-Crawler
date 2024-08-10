@@ -5,3 +5,8 @@
 [node name="Health" type="Node2D"]
 script = ExtResource("1_l7eoq")
 metadata/StartingMaxHealth = 100
+metadata/NormalDamageResistance = 0.0
+metadata/SlashDamageResistance = 0.0
+metadata/FireDamageResistance = 0.0
+metadata/IceDamageResistance = 0.0
+metadata/AirDamageResistance = 0.0
