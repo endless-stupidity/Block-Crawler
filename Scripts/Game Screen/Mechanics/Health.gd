@@ -9,7 +9,6 @@ func _ready() -> void:
 	# Initialize max_health with a value from metadata and set current health to max_health
 	max_health = get_meta("StartingMaxHealth")
 	health = max_health
-	take_damage(20)
 
 # Getter and setter functions for health and max health
 func get_max_health() -> int:
@@ -36,5 +35,4 @@ func take_damage(taken_damage: int, damage_type: String = "Normal") -> void:
 	# Calculate the final damage based on the resistance of the given damage type (recieve lower
 	# damage with higher values, recieve more damage with negative values)
 	final_damage = taken_damage - ((taken_damage * get_meta(damage_type + "DamageResistance")) / 100)
-	print_debug("taken damage: " + str(final_damage))
 	health -= final_damage

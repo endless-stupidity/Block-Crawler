@@ -59,8 +59,6 @@ func _input(event: InputEvent) -> void:
 							swipe_direction = "down"
 						else:
 							swipe_direction = "up"
-					# Print the swipe direction for debugging purposes
-					print_debug(swipe_direction)
 					# Call the move function with the corresponding direction
 					move(string_to_movingdirection(swipe_direction))
 					# Reset has_dragged to false after the move
