@@ -21,6 +21,10 @@ window/size/viewport_height=800
 window/size/resizable=false
 window/handheld/orientation=1
 
+[editor]
+
+run/main_run_args="--rendering-driver opengl3"
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
