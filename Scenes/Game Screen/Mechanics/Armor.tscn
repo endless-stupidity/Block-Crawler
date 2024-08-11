@@ -4,6 +4,6 @@
 
 [node name="Armor" type="Node2D"]
 script = ExtResource("1_yhrgw")
-metadata/ArmorAmount = 0
-metadata/ArmorHealth = 0
-metadata/HealthLossPerDamage = 0
+metadata/ArmorAmount = 5
+metadata/ArmorHealth = 20
+metadata/HealthLossPerDamage = 4
