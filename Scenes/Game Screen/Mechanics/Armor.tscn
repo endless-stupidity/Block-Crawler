@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://k8hlm7hclnh1"]
+
+[ext_resource type="Script" path="res://Scripts/Game Screen/Mechanics/Armor.gd" id="1_yhrgw"]
+
+[node name="Armor" type="Node2D"]
+script = ExtResource("1_yhrgw")
+metadata/ArmorAmount = 0
+metadata/ArmorHealth = 0
+metadata/HealthLossPerDamage = 0
